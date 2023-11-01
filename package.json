@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "@cloudinary/react": "^1.11.2",
+    "@cloudinary/url-gen": "^1.11.2",
+    "animate.css": "^4.1.1",
+    "bcryptjs": "^2.4.3",
+    "cookie-parser": "^1.4.6",
+    "dotenv": "^16.3.1",
+    "express-validator": "^7.0.1",
+    "jsonwebtoken": "^9.0.1",
+    "react-animate-on-scroll": "^2.1.7",
+    "react-infinite-scroll-component": "^6.1.0",
+    "react-loading-skeleton": "^3.3.1",
+    "react-top-loading-bar": "^2.3.1"
+  }
+}
