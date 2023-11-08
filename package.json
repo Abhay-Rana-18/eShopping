@@ -8,6 +8,7 @@
     "dotenv": "^16.3.1",
     "express-validator": "^7.0.1",
     "jsonwebtoken": "^9.0.1",
+    "mongoose": "^8.0.0",
     "node": "^21.1.0",
     "react-animate-on-scroll": "^2.1.7",
     "react-infinite-scroll-component": "^6.1.0",
