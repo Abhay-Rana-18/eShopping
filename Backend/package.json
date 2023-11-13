@@ -12,9 +12,9 @@
     "url": "eShopping"
   },
   "engines": {
-    "node": ">=20.9.0"
+    "node": ">=16.9.0"
   },
-  
+
   "author": "Abhay18",
   "license": "ISC",
   "dependencies": {
