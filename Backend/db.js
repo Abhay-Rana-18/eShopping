@@ -1,9 +1,7 @@
-console.log("start");
+const env = require("dotenv").config();
 const mongoose = require('mongoose');
-console.log("middle");
-// const mongoURI = 'mongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+1.10.1';
-const mongoURI = 'mongodb+srv://abhay18:lvxpPiCuRe0n2wEF@atlascluster.vmitatq.mongodb.net/eshopping?retryWrites=true&w=majority';
-console.log("end");
+
+const mongoURI = process.env.DATABASE;
 
 const connectToMongo = async() => {
     await mongoose.connect(mongoURI);
