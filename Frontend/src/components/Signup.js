@@ -17,7 +17,7 @@ export default function Signup() {
   const handleClick = async (e) => {
     e.preventDefault();
 
-    let response = await fetch(`http://localhost:5000/eShopping/auth/`, {
+    let response = await fetch(`https://eshopping-backend.onrender.com/eShopping/auth/`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

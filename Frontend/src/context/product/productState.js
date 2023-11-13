@@ -4,7 +4,8 @@ import axios from "axios";
 
 const ProductState = (props) => {
   // our host
-  const host = "http://localhost:5000";
+  // const host = "http://localhost:5000";
+  const host = "https://eshopping-backend.onrender.com"; 
   // Adding Products
   let [products, setProducts] = useState([]);
   let [atcproducts, setAtcproducts] = useState([]);
