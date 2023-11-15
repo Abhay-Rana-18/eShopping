@@ -12,7 +12,7 @@ export default function Login() {
 
   const handleClick = async (e) => {
     e.preventDefault();
-    const host = "http://localhost:5000";
+    const host = "https://eshopping-backend.onrender.com";
     let response = await fetch(`https://eshopping-backend.onrender.com/eShopping/auth/login/`, {
       method: "POST",
       headers: {

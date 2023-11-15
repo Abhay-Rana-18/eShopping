@@ -86,6 +86,7 @@ router.post(
         tag,
       });
       const saveProduct = await product.save();
+      // await Product.create(product);
       if (!saveProduct) {
         return res.status(202).send("product doesn't save");
       }

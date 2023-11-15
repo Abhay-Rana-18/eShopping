@@ -9,7 +9,7 @@ const Home = () => {
   let context = useContext(ProductContext);
   let { products, setProducts } = context;
   const getProduct = async () => {
-    // const host = "http://localhost:5000";
+    // const host = "https://eshopping-backend.onrender.com";
     const host = "https://eshopping-backend.onrender.com";
     // API call
     setLoading(true);

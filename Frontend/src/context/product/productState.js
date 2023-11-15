@@ -226,26 +226,26 @@ const ProductState = (props) => {
   };
 
   // FUNCTION TO ADD PRODUCTS IN DB FROM AN API.
-  // const addApi = async () => {
-  //   const out = await axios.get("https://dummyjson.com/products");
-  //   const dt = out.data.products;
-  //   console.log(dt);
+  const addApi = async () => {
+    const out = await axios.get("https://dummyjson.com/products");
+    const dt = out.data.products;
+    console.log(dt);
 
-  //   for (var i = 0; i < dt.length; i++) {
-  //     addProduct(
-  //       dt[i].id,
-  //       dt[i].title,
-  //       dt[i].images,
-  //       dt[i].price,
-  //       dt[i].description,
-  //       dt[i].rating,
-  //       dt[i].discountPercentage,
-  //       dt[i].brand,
-  //       dt[i].category,
-  //       dt[i].stock
-  //     );
-  //   }
-  // };
+    for (var i = 0; i < dt.length; i++) {
+      addProduct(
+        dt[i].id,
+        dt[i].title,
+        dt[i].images,
+        dt[i].price,
+        dt[i].description,
+        dt[i].rating,
+        dt[i].discountPercentage,
+        dt[i].brand,
+        dt[i].category,
+        dt[i].stock
+      );
+    }
+  };
 
   // Delete a Product
   const deleteProduct = async (id) => {
