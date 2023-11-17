@@ -7,7 +7,7 @@ import DeleteModal from "./DeleteModal";
 
 import InfiniteScroll from "react-infinite-scroll-component";
 
-import mobile from "../images/laptops.jpeg";
+import mac from "../images/mac.jpg";
 import Loading from "./Loading";
 
 // Skelton Loading
@@ -180,7 +180,6 @@ const Product = () => {
       {alert ? <Alert alert={alert} /> : ""}
 
       {/* <Skeleton /> */}
-      
 
       {/* Carousel */}
 
@@ -218,14 +217,15 @@ const Product = () => {
           </div>
           <div className="carousel-item">
             <img
-              src="https://m.media-amazon.com/images/G/31/img21/shoes/2023/SS23/Herotater_pc/3._SX3000_QL85_.jpg"
+              // src="https://m.media-amazon.com/images/G/31/img21/shoes/2023/SS23/Herotater_pc/1._SX3000_QL85_.jpg"
+              src={mac}
               className="d-block w-100"
               alt="..."
             />
           </div>
           <div className="carousel-item">
             <img
-              src="https://m.media-amazon.com/images/G/31/img21/shoes/2023/SS23/Herotater_pc/1._SX3000_QL85_.jpg"
+              src="https://m.media-amazon.com/images/G/31/img21/shoes/2023/SS23/Herotater_pc/3._SX3000_QL85_.jpg"
               className="d-block w-100"
               alt="..."
             />

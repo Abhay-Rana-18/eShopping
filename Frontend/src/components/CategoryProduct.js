@@ -167,7 +167,7 @@ const CategoryProduct = () => {
         {cat.map((product) => {
           return (
             <>
-              <div className="c" key={product._id}>
+              <div className="c" key={product.id}>
                 <ProductItem
                   product={product}
                   updateProduct={updateProduct}

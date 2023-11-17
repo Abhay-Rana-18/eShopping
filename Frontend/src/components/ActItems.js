@@ -2,15 +2,22 @@ import React, { useContext, useEffect } from "react";
 import ProductContext from "../context/product/productContext";
 import AtcComp from "./AtcComp";
 import check from "../images/checked.png";
+import { Navigate, useNavigate } from "react-router-dom";
 
 const ActItems = () => {
+  const navigate = useNavigate();
   let bill = 0;
   let discount = 0;
-  let { atcproducts, plusAtc, minusAtc, getAllatc, delAtc } =
+  let { atcproducts, plusAtc, minusAtc, getAllatc, delAtc, orderPlaced } =
     useContext(ProductContext);
   useEffect(() => {
     getAllatc();
+    // orderPlaced();
   }, []);
+  const relocate = () => {
+    orderPlaced();
+    navigate("/order");
+  }
   return (
     <div className="w-100vw">
       {atcproducts.map((product) => {
@@ -65,7 +72,7 @@ const ActItems = () => {
             {discount} on this order.
           </p>
         </div>
-        <button className="btn btn-success mt-3 w-100 placeOrder">
+        <button className="btn btn-success mt-3 w-100 placeOrder" onClick={relocate} >
           <img className="check w-7 mr-1" src={check} alt="" /> Place Order
         </button>
       </div>

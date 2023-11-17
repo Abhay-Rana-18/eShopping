@@ -14,6 +14,7 @@ import ActItems from "./components/ActItems";
 import ProductPage from "./components/ProductPage";
 import CategoryProduct from "./components/CategoryProduct";
 import SerachItems from "./components/SerachItems";
+import PlaceOrder from "./components/order";
 
 import { Cloudinary } from "@cloudinary/url-gen";
 import TagWiseProducts from "./components/TagWiseProducts";
@@ -53,6 +54,11 @@ function App() {
               exact
               path="/searchedProducts/:query"
               element={<SerachItems />}
+            ></Route>
+            <Route
+              exact
+              path="/order"
+              element={<PlaceOrder />}
             ></Route>
           </Routes>
         </BrowserRouter>

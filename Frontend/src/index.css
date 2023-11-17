@@ -39,10 +39,6 @@ code {
 
 }
 
-.midNav {
-  width: 100vw;
-  display: none;
-}
 
 .w-100vw {
   overflow: hidden;
@@ -69,7 +65,7 @@ code {
 .products {
   /* background-color: gray; */
   margin: 0 1vw;
-  padding: 2vh 0;
+  padding: 0vh 0;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   row-gap: 5vh;
@@ -91,8 +87,6 @@ code {
 
 
 .product {
-  /* border-radius: 0px; */
-  /* border: 1px solid black; */
   position: relative;
   --border-size: 1px;
   --border-angle: 0turn;
@@ -179,7 +173,9 @@ code {
   z-index: 1;
 }
 
-
+.midNav {
+  overflow-x: hidden !important;
+}
 
 .far {
   margin-top: 15px;
@@ -197,6 +193,12 @@ code {
 .add {
   position: absolute;
   right: 20px;
+  cursor: pointer;
+}
+
+.add2 {
+  position: relative;
+  left: 10vw;
   cursor: pointer;
 }
 
@@ -346,6 +348,22 @@ code {
   padding-left: 10px;
   padding-right: 10px;
   margin-left: 1rem;
+}
+
+/* Place Order */
+.placed {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  background-color: rgb(191, 239, 198);
+}
+.placed p {
+  text-align: center;
+  font-size: 3rem;
+  color: rgb(6, 87, 6);
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 500;
+  margin-top: 30vh;
 }
 
 .remove {
@@ -786,8 +804,12 @@ a {
 .rate {
   position: relative;
   top: -2rem;
-  left: 15rem;
+  left: 14rem;
 
+}
+
+.card .flexbox {
+  margin: 18px -10px;
 }
 
 .header .title {
@@ -1010,7 +1032,7 @@ a {
   background: linear-gradient(to bottom, #5b5b5b, #daf1da);
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  column-gap: 1rem;
+  /* column-gap: 1rem; */
   padding: 10px 1rem;
   border-radius: 20px;
 }
@@ -1079,7 +1101,18 @@ a {
   left: 39vw;
 
 }
-
+#inp2 {
+  font-weight: 400;
+  font-size: 0.9rem;
+  width: 30vw;
+  border: 1.3px solid black;
+  padding: 0.2em 1em 0.3em 2.3rem;
+  box-sizing: border-box;
+  border-radius: 2.5em;
+  color: black;
+  margin-left: 20vw;
+  
+}
 
 
 .searchButton {
@@ -1087,6 +1120,13 @@ a {
   position: absolute;
   left: 40vw;
   top: 12px;
+  z-index: 2;
+}
+.searchButton2 {
+  width: 60px;
+  position: absolute;
+  left: 29vw;
+  top: 20px;
   z-index: 2;
 }
 
@@ -1367,20 +1407,14 @@ a {
     display: none;
   }
 
-  .midNav {
-    display: block;
-    position: relative;
-    top: 1rem;
-    width: 100vw !important;
+
+  .searchButton2{
+    top: 20px;
+    left: 30vw;
   }
 
-  .midNav .searchButton {
-    top: 5px;
-    left: 25vw;
-  }
-
-  .midNav #inp {
-    left: 23vw !important;
+  #inp2 {
+    display: inline;
     width: 50vw !important;
   }
 
@@ -1490,10 +1524,6 @@ a {
     font-size: 0.7rem;
   }
 
-  .slide img {
-    height: 35vh;
-  }
-
 }
 
 @media (max-width: 575px) {
@@ -1558,6 +1588,11 @@ a {
     height: 50vw;
   }
 
+  .bill {
+    margin-left: 5vw;
+    width: 86vw !important;
+  }
+
 }
 
 @media (max-width: 507px) {
@@ -1565,7 +1600,10 @@ a {
     row-gap: 2rem;
     /* column-gap: -5rem; */
   }
-
+  .add2 {
+    left: 1.5rem;
+  }
+  
   .cardd {
     width: 12rem !important;
   }
@@ -1574,8 +1612,9 @@ a {
     height: 7rem;
   }
 
-  .stars {
-    margin-left: -200px;
+  .loading img {
+    width: 2.5rem !important;
+    margin-top: 15rem !important;
   }
 
   .mrp {
@@ -1626,6 +1665,20 @@ a {
   .price {
     margin-top: 0rem !important;
   }
+  #inp2 {
+    margin-left: 14vw;
+  }
+  .add2 {
+    top: -0.2rem;
+    left: 3rem;
+  }
+  .searchButton2 {
+    left: 25vw !important;
+  }
+  .num {
+    top: 5px;
+    left: 30px;
+  }
 }
 
 @media (max-width: 468px) {
@@ -1643,6 +1696,10 @@ a {
 
   .atcBody h5 {
     font-size: 1.2rem;
+  }
+
+  .searchButton2{
+    left: 32vw;
   }
 
   .atcStars {
@@ -1750,6 +1807,25 @@ a {
     width: 80vw;
     height: 60vw;
   }
+  .product .flexbox {
+    margin-left: 0px;
+  }
+  .add2 {
+    left: 1rem;
+  }
+  .searchButton2 {
+    left: 27vw !important;
+  }
+}
+
+@media (max-width: 384px) {
+  .add2 {
+    top: 0rem !important;
+  }
+  .num {
+    top: 0.3rem !important;
+    left: 1.8rem !important;
+  }
 }
 
 @media (max-width: 390px) {
@@ -1777,7 +1853,9 @@ a {
   .stars {
     margin-top: 30px;
     margin-bottom: -2.2rem;
+    margin-left: -200px;
   }
+
 
   .brand {
     font-size: 0.8rem;
@@ -1788,7 +1866,7 @@ a {
     display: none;
   }
 
-  #inp {
+  #inp, #inp2 {
     font-size: 0.8rem;
   }
 
@@ -1803,9 +1881,23 @@ a {
   .remove {
     padding: 1px 0px;
   }
+  .add2 {
+    left: 0.8rem;
+  }
 
 }
-
+@media (max-width: 385px) {
+  .add2 {
+    top: -1rem;
+  }
+  .num {
+    left: 20px;
+    top: 2rem;
+  }
+  .searchButton2 {
+    left: 7.8rem;
+  }
+}
 @media (max-width: 352px) {
   .cardd {
     width: 9rem !important;
@@ -1845,6 +1937,19 @@ a {
   .category img {
     width: 15vw;
     height: 15vw;
+  }
+  .searchButton2 {
+    left: 5.2rem !important;
+  }
+  #inp2 {
+    margin-left: 10vw;
+  }
+  .add2 {
+    top: -0.2rem;
+  }
+  .num {
+    top: 5px;
+    left: 30px;
   }
 
 }

@@ -83,6 +83,15 @@ const ProductState = (props) => {
     setA(json.length);
   };
 
+  const orderPlaced = async () => {
+    const res = await fetch(`${host}/eShopping/atc/orderPlaced`, {
+      method: "DELETE",
+      headers: {
+        "auth-token": localStorage.getItem("token"),
+      },
+    });
+  };
+
   // Deleting items from add to cart
   const delAtc = async (id) => {
     const res = await fetch(`${host}/eShopping/atc/deleteItem/${id}`, {
@@ -420,6 +429,7 @@ const ProductState = (props) => {
         fetchMoreProducts,
         tagProducts,
         searchTag,
+        orderPlaced,
       }}
     >
       {props.children}

@@ -2,7 +2,7 @@ const jwt = require("jsonwebtoken");
 const SECRET_KEY = "THISISOURSECRETKEYWHICHISSECRET";
 
 const userAtc = async (req, res, next) => {
-    req.user = null;
+  req.user = null;
   const token = req.header("auth-token");
   if (!token) {
     return res.status(401).send("no token");

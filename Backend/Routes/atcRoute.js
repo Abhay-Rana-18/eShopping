@@ -22,7 +22,16 @@ router.post("/:id", userAtc, async (req, res) => {
       }
     }
     if (add) {
-      let { _id, title, images, price, stock, rating, brand, discountPercentage } = product;
+      let {
+        _id,
+        title,
+        images,
+        price,
+        stock,
+        rating,
+        brand,
+        discountPercentage,
+      } = product;
       const result = await new AddToCart({
         user: req.user.id,
         product_id: _id,
@@ -54,6 +63,16 @@ router.get("/", userAtc, async (req, res) => {
     res.status(200).json(Atc);
   } catch (error) {
     return res.status(500).send(error);
+  }
+});
+
+// Route to delete all cart contents --> /eShopping/atc/orderPlaced
+router.delete("/orderPlaced", userAtc, async (req, res) => {
+  try {
+    const atc = await AddToCart.deleteMany({ user: req.user.id });
+    res.status(200).send({ message: "Cart contents deleted successfully" });
+  } catch (error) {
+    res.status(500).send({ error: "Internal server error" });
   }
 });
 
