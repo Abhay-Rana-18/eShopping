@@ -62,7 +62,7 @@ const ProductPage_Mobile = () => {
   };
 
   const handleBuy = async () => {
-    navigate("/buy");
+    // navigate("/buy");
   };
 
   useEffect(() => {

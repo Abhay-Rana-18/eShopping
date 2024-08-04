@@ -29,7 +29,7 @@ const ProductItem = (props) => {
 
       <Alert alert={alert} />
 
-      <div className={product.discountPercentage>13 ? "product" : "card"}>
+      <div className={product.discountPercentage>15 ? "product" : "card"}>
         <div className="cardd p-2" style={{ width: "15rem" }}>
           <div className="card-img-top" onClick={handleClick}>
             {product.images[0] && product.images[1] && (

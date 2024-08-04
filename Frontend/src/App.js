@@ -30,7 +30,6 @@ function App() {
     <>
       <ProductState>
         <BrowserRouter>
-          
           <Navbar />
           <Routes>
             <Route exact path="/" element={<Home />}></Route>

@@ -171,7 +171,7 @@ const TagWiseProducts = () => {
         </div>
       </div>
 
-      <div className="products">
+      <div className="products mt-4">
         {tagProducts.map((product) => {
           return (
             <div className="c" key={product._id}>

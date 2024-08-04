@@ -4,6 +4,7 @@ import { useNavigate, Link } from "react-router-dom";
 import Alert from "./Alert";
 
 import buyImg from "../images/buy.png";
+import atcImg from "../images/atc.png";
 
 const ProductPage = () => {
   const { open, setOpen, getAtc, checkAtc, getitem } =
@@ -64,7 +65,7 @@ const ProductPage = () => {
   };
 
   const handleBuy = async () => {
-    navigate("/buy");
+    // navigate("/buy");
   };
 
   useEffect(() => {
@@ -144,7 +145,7 @@ const ProductPage = () => {
                 {isHovered ? (
                   <div className="i1">
                     <img
-                      src="http://co0kie.github.io/codepen/nike-product-page/cart.png"
+                      src={atcImg}
                       alt=""
                     />
                   </div>

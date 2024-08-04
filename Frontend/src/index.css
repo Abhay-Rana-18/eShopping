@@ -61,7 +61,10 @@ code {
 #register {                                                           
   background-color: rgb(89, 103, 254) !important;
 }
-
+.qr {
+  width: 50vw;
+  margin: auto;
+}
 .products {
   /* background-color: gray; */
   margin: 0 1vw;
@@ -1591,6 +1594,10 @@ a {
   .bill {
     margin-left: 5vw;
     width: 86vw !important;
+  }
+  .qr {
+    width: 70vw;
+    margin-top: 15vh;
   }
 
 }
